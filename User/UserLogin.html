@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户登录界面</title>
+    <link rel="stylesheet" href="styleLogin.css"/>
+</head>
+<body>
+    <div class="container">
+        <div class="panel">
+            <div class="content">
+                <div class="switch">
+                    <h1 id="login">登录</h1>
+                </div>
+
+                <form action="">
+
+                    <div id="userName" class="input" aria-placeholder="用户名"><input type="text"></div>
+                    <div id="password" class="input" aria-placeholder="密码"><input type="password"></div>
+
+                    <p>
+                        <a id="signUp" href="UserSignUp.html" class="input">跳转注册</a>
+                        <span>|</span>
+                        <a id="forget" href="UserRetrieve.html" class="input">忘记密码？</a>
+                    </p>
+                    <button class="button">登录</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.slim.js"></script>
+<script>
+
+    $('.input input').on('focus',function () {
+        $(this).parent().addClass('focus');
+    })
+
+    $('.input input').on('blur',function () {
+        if($(this).val() === '')
+            $(this).parent().removeClass('focus');
+    })
+</script>
+
+</html>
